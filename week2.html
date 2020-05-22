@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        .sidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+
+            .sidebar a {
+                padding: 12px 8px 10px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 140px; /* Same as the width of the sidenav */
+            padding: 0px 20px;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Arial;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+
+
+        body {
+            background-color: #ffffff;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #2980B9;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        img {
+            display: block;
+            width:80%;
+            
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+    <div class="sidebar">
+
+        <a href="index.html"> Home </a>
+        <a href="aboutme.html"> About me</a>
+        <a href="week1.html"> Intro to FabLab</a>
+        <a href="week2.html"> Web Development</a>
+        <a href="week3.html"> Website Hosting</a>
+        <a href="versionctrl.html"> Version Control</a>
+        <a href="week4.html"> CAD & Photoshop</a>
+        <a href="#Week5"> Week 5</a>
+        <a href="#Week6"> Week 6</a>
+        <a href="#Week7"> Week 7</a>
+    </div>
+
+
+    <div class="main">
+        <div style="background-color:black;padding:20px;color:white;font-size:20px;"><center><h1>Web Development</h1></center></div>
+        <p> </p>
+        <p><b>Lesson Dates:</b> 27 April, 1 May</p>
+        <p><b>Things Covered:</b> Webpage Development<br/><br/></p>
+        <center><h2><u><b>Choosing your Web Editor</b></u></h2></center>
+        <p><br/>
+            The first step to Web Development is to decide
+            on a web editor that you are comfortable to use. I have chosen to use <a href="https://code.visualstudio.com/"> Visual Studio Code </a> and
+            Visual Studio 2017 to start my coding because I am already familiar with the developer interface.
+        </p>
+
+        <center><h2><u><b>Starting on a new project</b></u></h2><br/><br/></center>
+        <center><img src="2020-05-07 (18).png"><br /></center>
+        <center>
+            <br /><br /><br /><br />Once, installed u may begin to start on your new project. <br /> <b>Step1:</b> Open your VScode app to the homepage and
+            press <b>Create new project...</b>
+        </center>
+        <center><br /><img src="2020-05-07.png"></center>
+        <center>
+            <br /><br /><br /><br /><b>Step 2:</b> Press <b>Visual C++</b> on the left side, click on <b>Empty Project</b>
+            and then name your project.
+        </center>
+        <center><br /><img src="2020-05-07 (1).png"></center>
+        <center><br /><br /><br /><br />After clicking <b>OK</b>, A page like this will pop up. This is your Solution.</center>
+        <center><br /><img src="2020-05-07 (2).png"></center>
+        <center>
+            <br /><br /><br /><br /><b>Step 3:</b>Right click on <b>Source Files</b> in the <b>Solution Explorer</b> and add new item.
+            Alternatively, you can press <b>Ctrl+Shift+A</b> on your keyboard.
+        </center>
+        <center><br /><img src="2020-05-07 (3).png"></center>
+        <center><br /><br /><br /><br /><b>Step 4:</b> Rename the Source.cpp file to Source.html and press <b>Add</b></center>
+        <center><br /><img src="2020-05-07 (4).png"></center>
+        <center><br /><br /><br /><br />The screen should appear like this. Now you may begin to code in HTML.</center>
+        <center><br /><img src="2020-05-07 (5).png"></center>
+        <center>
+            <br /><br /><br /><br />As a beginner I refer to <a href="https://www.w3schools.com/html/">
+                W3Schools Website
+            </a> for reference. Below I have written a very simple HTML code which
+            describes my first paragraph.
+        </center>
+        <center><br /><img src="2020-05-07 (7).png"></center>
+        <center>
+            <br /><br /><br /><b><br />Step 5:</b>Right click on <b>Source.html</b> in the <b>Solution Explorer</b> and
+            click <b>View in Browser</b>. Alternatively, you can press <b>Ctrl+Shift+W</b> on your keyboard.
+        </center>
+        <center><br /><img src="2020-05-07 (8).png"></center>
+        <center><br /><br /><br /><br />This will bring you to your Chrome HTML Document File.</center>
+        <center><br /><img src="2020-05-07 (9).png"></center>
+        <p><br /><br /><br /></p>
+        <center><h2><u><b>Making Subpages on a Website</b></u></h2></center>
+        <center><iframe width="800" height="470" src="https://www.youtube.com/embed/1UmtqZmP3ew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><center>
+
+
+
+
+            
+        <center><br /><br /><br /></center>
+        <footer style=" background-color: #73DAC6;color: black;font-size:13px;height:85px;padding-top:65px;padding-bottom:10px;">
+            <center><p>Copyright &#169 me. All rights reserved.</p></center>
+        </footer>
+
+    </div>
+
+
+
+
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        .sidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+
+            .sidebar a {
+                padding: 12px 8px 10px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 140px; /* Same as the width of the sidenav */
+            padding: 0px 20px;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Arial;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+
+
+        body {
+            background-color: #ffffff;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #2980B9;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        img {
+            display: inline-block;
+            border-radius: 14px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid;
+            text-align: left;
+            padding: 8px;
+            border-color: black;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+    <div class="sidebar">
+        <a href="index.html"> Home </a>
+        <a href="aboutme.html"> About me</a>
+        <a href="week1.html"> Intro to FabLab</a>
+        <a href="week2.html"> Web Development</a>
+        <a href="week3.html"> Website Hosting</a>
+        <a href="versionctrl.html"> Version Control</a>
+        <a href="week4.html"> CAD & Photoshop</a>
+        <a href="#Week5"> Week 5</a>
+        <a href="#Week6"> Week 6</a>
+        <a href="#Week7"> Week 7</a>
+    </div>
+
+
+    <div class="main">
+        <div style="background-color:black;padding:20px;color:white;font-size:20px;"><center><h1>Intro to FabLab</h1></center></div>
+        <p> </p>
+        <p><b>Lesson Dates:</b> 20 April, 24 April</p>
+        <p><b>Things Covered:</b> Introduction to FabLab, FabLab Safety & Tools, Software Tools & HTML</p>
+        <center><h2><u><b>An Intoduction to FabLab</b></u></h2></center>
+        <center><img src="fablabnews.jpg" alt="FabLab"></center>
+        <p>
+            As the name suggests, FabLab is a small scale workshop offering digital fabrication.
+            A fab lab is typically equipped with an array of flexible computer-controlled tools that
+            cover several different length scales and various materials, with the aim to make "almost anything".
+        <p>
+            <center><h2><u><b>FabLab Safety</b></u></h2></center>
+        <p>
+            Students are required to be dressed in <b>proper attire</b> in the FabLab. <br />
+            Long hair must be tied up, adorments must be kept, covered shoes has to be worned.
+            T-shirts must be short sleeved and must not be loose.
+        </p>
+        <p>Always read and understand the info printed on the safety warning placards before using the machines. </p>
+        <p>Know the boundaries of the machine(ie; <b>perimeter, drive train, points of operation</b>)</p>
+        <p><u><b>Beware of:</b></u></p>
+        <p>
+            &#9755 Entanglement Hazards<br />&#9755 Cutting Hazards<br />&#9755 Impact Hazazrds<br />&#9755 Shearing Hazards<br />&#9755 Crushing Hazards<br />
+            &#9755 Draw-in Hazards<br />&#9755 Frinction and Abrasion Hazards
+        <p>
+        <p><u><b>Emergency Contact List:</b></u></p>
+        <ul>
+            <li>995 - Ambulance/Fire</li>
+            <li>999 - Police</li>
+            <li>67721206/67721234 - General Office</li>
+            <li>67721234 - SP Emergency Hotline</li>
+
+        </ul>
+        <center><h2><u><b>List of Web Editors</b></u></h2></center>
+        <table>
+            <tr>
+                <th><center>Web Editor</center></th>
+                <th><center>Link</center></th>
+            </tr>
+            <tr>
+                <td style="width:160px;"><center><img src="Atom.png" style="width:88px;height:88px;"><br /><b>Atom</b></center></td>
+                <td><a href="https://atom.io/">https://atom.io/</a></td>
+            </tr>
+            <tr>
+                <td><center><img src="Brackets.jpg" style="width:88px;height:88px;"><br /><b>Brackets</b></center></td>
+                <td><a href="http://brackets.io/">http://brackets.io/</a></td>
+            </tr>
+            <tr>
+                <td><center><img src="Notepadpp.png" style="width:88px;height:88px;"><br /><b>Notepad++</b></center></td>
+                <td><a href="https://notepad-plus-plus.org/">https://notepad-plus-plus.org/</a></td>
+            </tr>
+            <tr>
+                <td><center><img src="Sublime.png" style="width:88px;height:88px;"><br /><b>SublimeText</b></center></td>
+                <td><a href="https://www.sublimetext.com/">https://www.sublimetext.com/</a></td>
+            </tr>
+            <tr>
+                <td><center><img src="VScode.png" style="width:88px;height:88px;"><br /><b>Visual Studio</b></center></td>
+                <td><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></td>
+            </tr>
+        </table>
+        <center><br /><br /><img src="f360.jpg" style="width:100px;height:100px;"></center>
+        <center><br /> Also,students are required to install <a href="https://www.autodesk.com/products/fusion-360/overview">AutoDesk Fusion 360</a>.</center>
+        <p><br /><br /><br /></p>
+        <footer style=" background-color: #73DAC6;color: black;font-size:13px;height:85px;padding-top:65px;padding-bottom:10px;">
+            <center><p>Copyright &#169 me. All rights reserved.</p></center>
+        </footer>
+
+
+    </div>
+
+
+
+
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        .sidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+
+            .sidebar a {
+                padding: 12px 8px 10px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 140px; /* Same as the width of the sidenav */
+            padding: 0px 20px;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Arial;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+
+
+        body {
+            background-color: #ffffff;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #2980B9;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        img {
+            display: block;
+            width: 80%;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+    <div class="sidebar">
+
+        <a href="index.html"> Home </a>
+        <a href="aboutme.html"> About me</a>
+        <a href="week1.html"> Intro to FabLab</a>
+        <a href="week2.html"> Web Development</a>
+        <a href="week3.html"> Website Hosting</a>
+        <a href="versionctrl.html"> Version Control</a>
+        <a href="week4.html"> CAD & Photoshop</a>
+        <a href="#Week5"> Week 5</a>
+        <a href="#Week6"> Week 6</a>
+        <a href="#Week7"> Week 7</a>
+    </div>
+
+
+    <div class="main">
+        <div style="background-color:black;padding:20px;color:white;font-size:20px;"><center><h1>Web Hosting</h1></center></div>
+        <p> </p>
+        <p><b>Lesson Dates:</b> 4 May</p>
+        <p><b>Things Covered:</b> Website Hosting, GitHub</p>
+        <center><h2><u><b>Hosting a Website</b></u></h2></center>
+        <center>
+            This is a step-by-step guide on how to host a website on <a href="https://github.com/"> GitHub </a>.<br />
+            <b>Step1:</b>Sign-up for GitHub. After doing so, create a new repository.
+        </center>
+
+        <center><br /><img src="2020-05-07 (10).png"><br /></center>
+        <center>
+            <br /><br /><br /><br /><b>Step 2:</b> Enter the name of your new repository. Description is optional. Choose the
+            public option.
+        </center>
+        <center><br /><img src="2020-05-07 (11).png"></center>
+        <center>
+            <br /><br /><br /><br />Also, &#10003 the <b>"Initialize this repository with README"</b>.
+            Click <b>Create repository</b> once done.
+        </center>
+        <center><br /><img src="2020-05-07 (12).png"></center>
+        <center>
+            <br /><br /><br /><br /><b>Step 3:</b> Go to your file explorer and rename your Chrome HTML Document
+            from <b>source</b> to <b>index</b>
+        </center>
+        <center><br /><img src="2020-05-07 (13).png"></center>
+        <center>
+            <br /><br /><br /><br /><b>Step 4:</b> Press <b>Upload</b> the repository and you will reach this page.
+            Drag the <b>index</b> Chrome HTML Document from your file explorer over to the page to upload. Once done,
+            press <b>commit changes</b>
+        </center>
+        <center><br /><img src="2020-05-07 (14).png"></center>
+        <center>
+            <br /><br /><br /><br /><b>Step 5:</b> Go to the <b>Settings</b> and change the GitHub branch
+            from <b>none</b> to <b>master branch</b>
+        </center>
+
+        <center><br /><img src="2020-05-07 (15).png"></center>
+        <center><br /><br /><br /><br />Once done, go to your Google browser and type <b>(your GitHub username).github.io/(name of repository)</b>.</center>
+        <center><br /><img src="2020-05-07 (16).png"></center>
+        <center>
+            <br /><br /><br /><br />Your GitHub page will appear and can be seen by the piblic.<b> Disclaimer:</b>You might have to wait for about 2 to 5 minutes for the website to be up.
+        </center>
+        <center><br /><img src="2020-05-07 (17).png"></center>
+        
+        <p><br /><br /><br /></p>
+        <footer style=" background-color: #73DAC6;color: black;font-size:13px;height:85px;padding-top:65px;padding-bottom:10px;">
+            <center><p>Copyright &#169 me. All rights reserved.</p></center>
+        </footer>
+    </div>
+
+
+
+
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+    </script>
+
+</body>
+</html>

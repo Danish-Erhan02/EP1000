@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        
+
+        .sidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+
+            .sidebar a {
+                padding: 12px 8px 10px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 140px; /* Same as the width of the sidenav */
+            padding: 0px 20px;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Arial;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+
+
+        body {
+            background-color: #ffffff;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #2980B9;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        * {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+  
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 24px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+        
+
+    </style>
+
+</head>
+
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+    <div class="sidebar">
+
+        <a href="index.html"> Home </a>
+        <a href="aboutme.html"> About me</a>
+        <a href="week1.html"> Intro to FabLab</a>
+        <a href="week2.html"> Web Development</a>
+        <a href="week3.html"> Website Hosting</a>
+        <a href="versionctrl.html"> Version Control</a>
+        <a href="week4.html"> CAD & Photoshop</a>
+        <a href="#Week5"> Week 5</a>
+        <a href="#Week6"> Week 6</a>
+        <a href="#Week7"> Week 7</a>
+    </div>
+
+
+    <div class="main">
+        <div style="background-color:black;padding:20px;color:white;font-size:20px;"><center><h1>CAD & Photoshop</h1></center></div>
+        <p> </p>
+        <p><b>Lesson Dates:</b> 11 May, 15 May</p>
+        <p><b>Things Covered:</b> Fusion360, Computer Graphics</p>
+        <center><h2><u><b>Getting Started with Autodesk Fusion360</b></u></h2></center>
+
+        <p>
+            <br />Fusion360 is a Computer-Aided Design software which free to use. It is the way to go for designers, engineers, students and hobbyists.
+            The versatility of Fusion360 allows you to design anything you want. The cloud-based system of Fusion360 is also a plus for people who
+            want to work on their projects anytime and anywhere.<br/>
+        </p>
+
+    
+        <button class="collapsible"><b>Fusion360 Crash Course</b></button>
+<div class="content">
+    <p><br/><b>1. Extrusion</b> </p>
+    <div class="row">
+        <div class="column">
+          <img src="beforeextrude.png" alt="sketch" style="width:100%;">
+        </div>
+        <div class="column">
+          <img src="afterextrude.png" alt="extrusion" style="width:100%;">
+        </div> 
+      </div>
+      <p><br/>Extrusion creates a 3D solid from an object that encloses an area, or a 3D surface from an object with open ends. To 
+        extrude, click on the <b>Finish Sketch</b> and mouse over to the <b>Create</b> tab and click the <b>Extrude</b>tool.
+        Another way is using the shortcut key 'E' on the keyboard.<br/><br/></p>
+
+    <p><br/><b>2. Revolution</b> </p>
+    <div class="row">
+        <div class="column">
+          <img src="beforerevolve.png" alt="sketch" style="width:100%;">
+        </div>
+        <div class="column">
+          <img src="afterrevolve.png" alt="Revolution" style="width:100%;">
+        </div> 
+      </div>
+      <p><br/>
+        Revolve creates a feature or new solid body by rotating one or more sketched profiles around an axis. To revolve an object create 
+        a 2D sketch that is enclosed. Mouse over to the <b>Create</b> tab and click the <b>Revolve</b> tool. Select the face you wish to revolve and
+        the axis of the revolution.
+     <br/><br/> </p>
+
+     <p><br/><b>3. Fillet</b> </p>
+    <div class="row">
+        <div class="column">
+          <img src="afterextrude.png" alt="sketch" style="width:100%;">
+        </div>
+        <div class="column">
+          <img src="afterfillet.png" alt="Revolution" style="width:100%;">
+        </div> 
+      </div>
+      <p><br/>
+        Fillet creates smooth rounded edges to objects. To create a fillet, mouse over to the <b>Modify</b> tab and click on
+        the <b>Fillet</b> tool. Another way is using the shortcut key 'F' on the keyboard. 
+     <br/><br/> </p>
+
+     <p><br/><b>4. Chamfer</b> </p>
+     <div class="row">
+         <div class="column">
+           <img src="afterextrude.png" alt="sketch" style="width:100%;">
+         </div>
+         <div class="column">
+           <img src="afterchamfer.png" alt="Chamfer" style="width:100%;">
+         </div> 
+       </div>
+       <p><br/>
+         Chamfer creates a sloped transition between two surfaces or adjacent faces on a 3D solid. To create a Chamfer,
+          mouse over to the <b>Modify</b> tab and click on the <b>Chamfer</b> tool. 
+      <br/><br/> </p>
+
+
+     <p><br/><b>5. Offset</b> </p>
+    <div class="row">
+        <div class="column">
+          <img src="beforeextrude.png" alt="sketch" style="width:100%;">
+        </div>
+        <div class="column">
+          <img src="afteroffset.png" alt="Offset line" style="width:100%;">
+        </div> 
+      </div>
+      <p><br/>
+        Offset creates concentric circles, parallel lines, and parallel curves on the 2D sketch. To offset, mouse over to 
+        the <b>Modify</b> tab and click on the <b>Offset</b> tool. Another way is using the shortcut key 'O' on the keyboard. 
+     <br/><br/> </p>
+
+
+     <p><br/><b>6. Loft</b> </p>
+     <div class="row">
+         <div class="column">
+           <img src="beforeloft.png" alt="sketch" style="width:100%;">
+         </div>
+         <div class="column">
+           <img src="afterloft.png" alt="Loft" style="width:100%;">
+         </div> 
+       </div>
+       <p><br/>
+         Loft is a great tool for creating a transition between two or more sketch profiles or faces.
+         This tool can be used to create chutes or sheet metal transitions. To create a loft, draw a sketch on any plane then 
+         press <b>Finish Sketch</b>. Go to the <b>Contruct</b> tab and click on <b>Offset Plane</b>. After specifying the distance
+         of the offset plane according to your liking, create another sketch on the <b>Offset Plane</b> and press <b>Finish Sketch</b>.
+         Now you have 2 planes with a sketch on each plane. Repeat these steps for a many planes as you wish. Next, mouse over to the 
+         <b>Create</b> tab and click on the <b>Loft</b> icon. Lastly, select your sketches and connect your sketches with your mouse to produce 
+         the lofted feature. 
+      <br/><br/> </p>
+
+      <p><br/><b>7. Loft</b> </p>
+     <div class="row">
+         <div class="column">
+           <img src="afterloft.png" alt="Loft" style="width:100%;">
+         </div>
+         <div class="column">
+           <img src="aftershell.png" alt="Shell" style="width:100%;">
+         </div> 
+       </div>
+       <p><br/>
+        Shell removes the material inside a body. To shell and object, first create a 3D object. In this scenario, I have reused 
+        the lofted object from the above point. After doing so, mouse over to the <b>Modify</b> tab and click on the <b>Shell</b>
+        icon. Then, select from which face you would like to shell the object. <br/><br/>
+        <i>Bonus: How did I get the cross-section view of the object? After I shelled, I mouse over to the <b>Inspect</b> tab
+        and I clicked on the <b>Section Analysis</b> icon. From there, I select the cutting plane of the object.</i>
+      <br/><br/> </p>
+</div>
+
+        
+
+
+
+
+
+
+        <center><h3><br />Interactive Images Loading...</h3></center>
+
+        <center> <iframe src="https://ichat816.autodesk360.com/shares/public/SH56a43QTfd62c1cd968ae751d7502d39ae7?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></center>
+        <center><p><b>Example 1</b><br /></center>
+        <p><b>More examples:</b></p>
+            <ul>
+                <li><a href="https://a360.co/3cy2zU8">Example 2</a></li>
+                <li><a href="https://a360.co/2Tljge3">Example 3</a></li>
+            </ul>
+        <p><br/><br/></p>
+
+
+
+
+        <center><iframe src="https://ichat816.autodesk360.com/shares/public/SH56a43QTfd62c1cd9686ec4b4cb00576077?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></center>
+        <center><p><b>Name Tag 1</b><br/></p></center>
+        <p><b>More examples:</b></p>
+             <ul>
+                <li><a href="https://a360.co/2Tf11Xi">Name Tag 2</a></li>
+        
+            </ul>
+        <p><br/></p>
+
+        <h3><br />What are fidget spinners? </h3>
+        <p>A fidget spinner is a toy consisting of a ball bearing in the center of a multi-lobed
+             flat structure made from metal or plastic which is designed to spin along its axis with little effort.<br/></p>
+        <center><h3><br />Parts of a fidget spinner<br/></h3></center>
+        <div class="row">
+            <div class="column">
+              <img src="partsofspinner.gif" alt="sketch" style="width:100%;">
+            </div>
+            <div class="column">
+              <img src="ringparts.jpg" alt="Offset line" style="width:100%;">
+            </div> 
+          </div>
+
+        <p><br/>Below are the designs of my fidget spinners. The center hole for all my fidget spinners have been dimensioned to 8 by 22 by 7 mm to fit 
+            the<a href="https://www.skf.com/us/products/rolling-bearings/ball-bearings/deep-groove-ball-bearings/productid-608-Z"> ABEC 608 Bearing</a> for the rotation mechanism. Fidget Spinners 1 and 2 are original designs from me while
+        Fidget Spinner 3 is inspired by <a href="https://www.youtube.com/watch?v=Fn7R9MlnLXk">Ninja Star Fidget Spinner.</a> Hexagonal holes were added to Fidget Spinner
+    1 and 2 to allow the fitting of<a href="https://www.westfieldfasteners.co.uk/Metric-Nuts/Hex-Nut-M8-A2-Stainless.html"> Hex Nut M8</a> to act as counter-weights. <br/><br/></p> 
+
+
+        <center><iframe src="https://ichat816.autodesk360.com/shares/public/SH56a43QTfd62c1cd968cf4a5b798de85236?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></center>
+        <center><p><b>Fidget Spinner 1</b><br /><p></center>
+            <p><b>More examples:</b></p>
+            <ul>
+                <li><a href="https://a360.co/3g26Y3W">Fidget Spinner 2</a></li>
+                <li><a href="https://a360.co/2LCtEtx">Fidget Spinner 3</a></li>
+            </ul>
+        <p><br/><br/></p>
+      
+
+        <center>  <iframe src="https://ichat816.autodesk360.com/shares/public/SH56a43QTfd62c1cd968de1c370699199775?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></center>
+        <center><p><b>Chess &#9822 </b><br /><br /><br /><br /><p></center>
+        <center><h2><u><b>Using Gimp</b></u></h2></center>
+        <center><img src="birdie.png" alt="Birdie" style="height:512px;"></center>
+        <center><p>I used the GIMP software to crop out the background of a bird sitting on a branch and I added some text to it.</p></center>
+          <p><u><b>GIMP resources:</b></u></p>
+    <ul>
+            <li>To download GIMP: Click <a href="https://www.gimp.org/downloads/">here.</a></li>
+            <li><a href="https://www.youtube.com/watch?v=IeABb8cwdUg">Learn GIMP in 30 minutes.</a></li>
+            <li><a href="https://www.youtube.com/watch?v=BrasZlYrBEE">How to cut an object in GIMP.</a></li>
+            <li><a href="https://www.youtube.com/watch?v=3_xKt4OtBJA&t=57s">How to convert XCFfiles to PNG or JPEG.</a></li>
+
+        </ul>
+        <p><u><b>Fusion360 resources:</b></u></p>
+        <ul>
+                <li><a href="https://www.youtube.com/watch?v=Fn7R9MlnLXk"> Design a Ninja Star Fidget Spinner in Fusion 360 by Desktop Makes</a></li>
+                <li><a href="https://www.youtube.com/watch?v=ERDJu_v0tz8&t=387s"> Fusion 360 - Revolve Chess peaces by Halldor Gretar</a></li>
+                <li><a href=" https://www.pinterest.com/pin/769271180070987856/"> Shuriken Image</a></li>
+    
+            </ul>
+
+
+
+            <p><br /><br /><br /></p>
+            <footer style=" background-color: #73DAC6;color: black;font-size:13px;height:85px;padding-top:65px;padding-bottom:10px;">
+                <center><p>Copyright &#169 me. All rights reserved.</p></center>
+            </footer>
+    </div>
+
+
+
+
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        .sidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+
+            .sidebar a {
+                padding: 12px 8px 10px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 140px; /* Same as the width of the sidenav */
+            padding: 0px 20px;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Arial;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+
+
+        body {
+            background-color: #ffffff;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #2980B9;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        img {
+            display: block;
+            width: 80%;
+        }
+
+
+
+    </style>
+
+</head>
+
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+    <div class="sidebar">
+
+        <a href="index.html"> Home </a>
+        <a href="aboutme.html"> About me</a>
+        <a href="week1.html"> Intro to FabLab</a>
+        <a href="week2.html"> Web Development</a>
+        <a href="week3.html"> Website Hosting</a>
+        <a href="versionctrl.html"> Version Control</a>
+        <a href="week4.html"> CAD & Photoshop</a>
+        <a href="#Week5"> Week 5</a>
+        <a href="#Week6"> Week 6</a>
+        <a href="#Week7"> Week 7</a>
+    </div>
+
+
+    <div class="main">
+        <div style="background-color:black;padding:20px;color:white;font-size:20px;"><center><h1>Version Control</h1></center></div>
+        <p> </p>
+        <p><b>Lesson Dates:</b> 4 May</p>
+        <p><b>Things Covered:</b> Version Control</p>
+        
+
+        <p>
+            <br /> Version Control System (VCS) is a software which keeps track of code in a special kind of database.
+            It allows many developers to work on a code, check the history of a code, trace of the origin of the code and edit the code all
+            at the same time. There are many softwares that can be used for version control such as Fossil, GNU arch, Mercurial, etc. 
+            However, Git is by far the most popular, open source and distributed VCS. <br/><br/>
+        </p>
+
+        <p><u><b>How does VCS work?</b></u></p>
+        <p><br/> 
+            <img src="versioncontrol.jpg" alt="Version Control" style="width:512px;height:auto;">
+        </p>
+
+
+        <p><u><b>Ways to keep track of your work using Git:</b></u></p>
+        <ul>
+            <li> Github Desktop</li>
+            <li> Command-line (Git Bash)</li>
+            </ul>
+
+        <center><h2><u><b>GitHub Desktop</b></u></h2></center>
+         <center><br/><img src="gitdesktop1.png" alt="GitHub Desktop" style="width:800px;height:auto;"></center>
+         <p><u><b><br/>How to use GitHub Desktop:</b></u></p>
+         <p>Step 1: Download GitHub Desktop <a href="https://desktop.github.com/">here</a>.<br/><br/>
+            Step 2: Login into GitHub Desktop. Use the login details of your current GitHub account.<br/><br/>
+        Creating new repositry: In the Menu bar of the page, <b>Add</b> new repositry, set the <i>directory</i> of your  repository
+         and set it to <b>Master Branch</b>. Your repository will be initialised in your <i>Local</i> and <i>Remote Branch</i>.<br/><br/>
+        To update repository: Make changes in the <i>Staging Area</i> (i.e your web editor) and save it. Go to GitHub Desktop and your 
+    changes will be seen with a &#10003 on the left bar of the page. On the bottom left of the page, <b>Commit to master</b>, then
+<b>Push to Origin</b>. <br/><br/></p>
+
+<center><h2><u><b>Command-line using Git Bash</b></u></h2></center>
+<center><br/><img src="bash2.png" alt="Git Bash" style="width:800px;height:auto;"></center>
+<p>Step 1: Download Git Bash <a href="https://git-scm.com/downloads">here</a>.<br/><br/>
+Step 2: Configure your Git Bash.<br/><br/>
+</p>
+
+<p><u><b>Command-line tutorials/resources:</b></u></p>
+<ul>
+    <li> <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf"> Command-line cheat sheet.</a></li>
+    <li> <a href="https://www.youtube.com/watch?v=5XgBd6rjuDQ"> How to use the Command Line | Terminal Basics for Beginners.</li>
+    <li> <a href="https://www.youtube.com/watch?v=77W2JSL7-r8&t=346s"> GitHub Desktop Quick Intro For Windows.</li>
+    </ul>
+
+
+
+        <center><br /><br /><br /></center>
+
+        <footer style=" background-color: #73DAC6;color: black;font-size:13px;height:85px;padding-top:65px;padding-bottom:10px;">
+            <center><p>Copyright &#169 me. All rights reserved.</p></center>
+        </footer>
+    </div>
+
+
+
+
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+    </script>
+
+</body>
+</html>
