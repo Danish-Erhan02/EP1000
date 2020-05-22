@@ -98,6 +98,44 @@
         tr:nth-child(odd) {
             background-color: white;
         }
+
+
+        .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 24px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+       
     </style>
 
 </head>
@@ -131,9 +169,11 @@
             As the name suggests, FabLab is a small scale workshop offering digital fabrication.
             A fab lab is typically equipped with an array of flexible computer-controlled tools that
             cover several different length scales and various materials, with the aim to make "almost anything".
-        <p>
-            <center><h2><u><b>FabLab Safety</b></u></h2></center>
-        <p>
+        </p>
+
+        <button class="collapsible"><b>Fusion360 Crash Course</b></button>
+        <div class="content">
+              <p>
             Students are required to be dressed in <b>proper attire</b> in the FabLab. <br />
             Long hair must be tied up, adorments must be kept, covered shoes has to be worned.
             T-shirts must be short sleeved and must not be loose.
@@ -153,6 +193,13 @@
             <li>67721234 - SP Emergency Hotline</li>
 
         </ul>
+        </div>
+        
+        
+
+
+        
+      
         <center><h2><u><b>List of Web Editors</b></u></h2></center>
         <table>
             <tr>
@@ -214,6 +261,22 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
     </script>
 
 </body>
