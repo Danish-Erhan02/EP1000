@@ -78,6 +78,44 @@
             width:80%;
             
         }
+
+
+        .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 24px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
     </style>
 
 </head>
@@ -113,8 +151,11 @@
             Visual Studio 2017 to start my coding because I am already familiar with the developer interface.
         </p>
 
-        <center><h2><u><b>Starting on a new project</b></u></h2><br/><br/></center>
-        <center><img src="2020-05-07 (18).png"><br /></center>
+
+
+        <button class="collapsible"><b>Starting on a new project on Visual Studio</b></button>
+        <div class="content">
+ <center><img src="2020-05-07 (18).png"><br /></center>
         <center>
             <br /><br /><br /><br />Once, installed u may begin to start on your new project. <br /> <b>Step1:</b> Open your VScode app to the homepage and
             press <b>Create new project...</b>
@@ -154,6 +195,12 @@
         <center><h2><u><b>Making Subpages on a Website</b></u></h2></center>
         <center><iframe width="800" height="470" src="https://www.youtube.com/embed/1UmtqZmP3ew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><center>
 
+        </div>
+
+
+
+        
+       
 
 
 
@@ -187,6 +234,21 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
 }
 
     </script>
