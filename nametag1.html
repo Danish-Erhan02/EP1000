@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        .sidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+
+            .sidebar a {
+                padding: 12px 8px 10px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 140px; /* Same as the width of the sidenav */
+            padding: 0px 20px;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Arial;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+
+
+        body {
+            background-color: #ffffff;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #2980B9;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        img {
+            display: block;
+            width: 80%;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+    <div class="sidebar">
+
+        <a href="index.html"> Home </a>
+        <a href="aboutme.html"> About me</a>
+        <a href="week1.html"> FabLab Safety</a>
+        <a href="week2.html"> Web Development</a>
+        <a href="week3.html"> Website Hosting</a>
+        <a href="versionctrl.html"> Version Control</a>
+        <a href="week4.html"> CAD & Photoshop</a>
+        <a href="3D.html"> 3D Printing</a>
+        <a href="#Week6"> Week 6</a>
+        <a href="#Week7"> Week 7</a>
+    </div>
+
+
+    <div class="main">
+        <div style="background-color:black;padding:20px;color:white;font-size:20px;"><center><h1>Nametag</h1></center></div>
+        <p> </p>
+        <center><iframe src="https://ichat816.autodesk360.com/shares/public/SH56a43QTfd62c1cd9686ec4b4cb00576077?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe></center>
+        <center><p><b>Name Tag 1</b><br/><br/></p></center>
+            <center><img src="nametag1a.png" alt="Example 1a" style="width:666px;height:auto;"></center>
+            <p><br/><br/>
+            To begin, I first created a sketch of the nametag. Note that the nametag  should not exceed <b>30mm X 70mm</b>, 
+            otherwise it will not fit into your pocket. The key ring hole must have a diameter of at least <b>2.5 mm</b>
+           with neck width of at least <b>3.5 mm</b> for strength, otherwise it will break when the metal keyring is inserted.
+          The overall thickness of the nametag must also <b>not exceed 4mm</b>. You can start of by:<br/>
+            <ol>
+              <li>Creating a rectangle of about 50 by 15mm.</li>
+              <li>Adding a trapezium/curve on one end of the rectangle. I ensured that trapezium symmetrically aligned with the rectangle
+                 In this case I approximated the height of my trapezium to be about 6.6mm.
+              </li>
+              <li>At the shortest end of the trapeium I added 2 arcs with a specification of 3.75 radius and 3.5 diameter respectvely. </li>
+              <li>I offseted the lines of my (trapezium + rectangle) shaped drawing inwards to about 2mm.</li>
+              <li>Lasly, for my drawing, I inserted my name using the <b>Text</b> tool found under the <b>Create</b> tab. I ensured that there
+              was enough spacing between my name and the inner walls of the nametag.</li>
+
+
+            </ol>
+            <br/><br/><br/></p>
+            <center><img src="nametag1b.png" alt="Example 1b" style="width:666px;height:auto;"></center>
+            <p><br/><br/>
+           After finishing the sketch, it is now time to extrude. Take note that the overall thickness should <b>not exceed 4mm</b>. For me,
+           extruded till its maximum allowed extrusion. Specify the height of your extrusions base on your linking. 
+              <br/><br/><br/></p>
+            <center><img src="nametag1c.png" alt="Example 1c" style="width:666px;height:auto;"></center>
+            <p><br/><br/>
+           Because nametags, are usually exposed or hung loosely, I decided to fillet the sides of the nametag. Above is an example of how I 
+           did the fillet for the ring hole.
+            <p><b>More examples:</b></p>
+             <ul>
+                <li><a href="https://a360.co/2Tf11Xi">Name Tag 2</a></li>
+              <br/><br/><br/></p>
+              </ul>
+        <p><br/></p>
+
+        <p><br /><br /><br /></p>
+        <footer style=" background-color: #73DAC6;color: black;font-size:13px;height:85px;padding-top:65px;padding-bottom:10px;">
+            <center><p>Copyright &#169 me. All rights reserved.</p></center>
+        </footer>
+    </div>
+
+
+
+
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+    </script>
+
+</body>
+</html>
