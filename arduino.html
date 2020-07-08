@@ -175,6 +175,86 @@
 <p>As per intructions, I have also connected the RED, GREEN and WHITE LEDs to output port 6, 7 and 8 respectively.</p>
      <center><br /><img src="assignment12.1.1.png" style="width:616px;"></center><br/>
 
+     <div id="randomcode">
+        <p>
+            // Program to count and display
+            // the number of key presses to 
+            // serial monitor
+            // PB - D2
+            // - Open: reads HIGH
+            // - Closed: reads LOW
+            
+            const int PB = 2; 
+            const int RED = 6;
+            const int GREEN = 7;
+            const int WHITE = 8;
+            int led = 5;
+            int newled = 0;
+            int cnt = 0; // init counter
+            
+            void setup()
+            {
+              // init PB as input
+              pinMode(PB, INPUT);
+              // init serial port
+              Serial.begin(9600);
+              pinMode(RED, OUTPUT);
+              pinMode(GREEN, OUTPUT);
+              pinMode(WHITE, OUTPUT);
+            }
+            
+            void loop()
+            {if (digitalRead(PB) == LOW){  // key pressed
+              newled = led++;
+                }
+                if (newled == 6)
+              {for(int i=0;i<1;i++){Serial.print("Red");}
+                digitalWrite(RED, HIGH);
+                digitalWrite(GREEN, LOW);
+                digitalWrite(WHITE, LOW);
+                delay (500);   
+              }
+             if (newled == 7)
+              {for(int j=0;j<1;j++){Serial.print("Green");}
+                digitalWrite(RED, LOW);
+                digitalWrite(GREEN, HIGH);
+                digitalWrite(WHITE, LOW);
+               delay (500);
+              }
+             if (newled == 8)
+              {
+                   for(int m=0;m<1;m++){Serial.print("White");}
+               Serial.end();
+                digitalWrite(RED, LOW);
+                digitalWrite(GREEN, LOW);
+                digitalWrite(WHITE, HIGH);
+               delay (500);
+              } 
+             if (newled == 9)
+              {
+                   for(int k=0;k<1;k++){Serial.print("All");}
+                digitalWrite(RED, HIGH);
+                digitalWrite(GREEN, HIGH);
+                digitalWrite(WHITE, HIGH);
+               delay (500);
+              } 
+              
+              if (newled == 10)
+              {
+                delay (3000);
+                for(int l=0;l<1;l++){Serial.print("Off");}
+                digitalWrite(RED, LOW);
+                digitalWrite(GREEN, LOW);
+                digitalWrite(WHITE, LOW);
+               delay (500);
+               newled = 0;
+              } 
+            }
+            
+         </p>
+
+     </div>
+
 
         <p><br /><br /><br /></p>
         <footer style=" background-color: #73DAC6;color: black;font-size:13px;height:85px;padding-top:65px;padding-bottom:10px;">
