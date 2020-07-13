@@ -190,7 +190,14 @@ the help of Mr Steven.</p>
 
 
 <center><iframe width="700" height="394" src="https://www.youtube.com/embed/yRZ_ZuCO2JM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><p>Note that the red LED is rather small and blocked by the wire :/</p></center>
+<center><p>Note that the red LED is rather small and blocked by the wire :/</p></center><br/>
+
+<h3>Debouncing</h3>
+<p>Pushbuttons often generate spurious open/close transitions when pressed, due to mechanical and physical issues:
+     these transitions may be read as multiple presses in a very short time fooling the program. Without debouncing, pressing the button once 
+     may cause unpredictable results. Debouncing therefore helps in filtering the signal.</p><br/>
+
+<center><br /><img src="switch_debounce.jpg" style="width:616px;"></center><br/>
      
 
         <p><br /><br /><br /></p>
