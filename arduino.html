@@ -223,12 +223,11 @@
        <li><a href="arduinocodes\led_demo\led_demo.ino">With Debounce</a></li>
    </ul><br/>
    
-   
-   
    <center><iframe width="700" height="394" src="https://www.youtube.com/embed/yRZ_ZuCO2JM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
    <center><p>Note that the red LED is rather small and blocked by the wire :/</p></center><br/>
       
    <br/><br/> </p>
+
      </div>
 
 <h3>Debouncing</h3>
@@ -290,6 +289,20 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
     </script>
 
 </body>
