@@ -77,6 +77,44 @@
             display: block;
             width: 80%;
         }
+
+    
+        .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 24px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
     </style>
 
 </head>
@@ -161,6 +199,8 @@
     <p>Personally, I test out my Arduino circuit on <a href="https://www.tinkercad.com/dashboard?type=circuits&collection=designs">TinkerCAD first</a>
      before building the actual circut.</p><br/>
 
+
+
      <button class="collapsible"><b>Assignment 12</b></button>
      <div class="content">
          <br/>
@@ -187,7 +227,8 @@
    
    <center><iframe width="700" height="394" src="https://www.youtube.com/embed/yRZ_ZuCO2JM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
    <center><p>Note that the red LED is rather small and blocked by the wire :/</p></center><br/>
-           <br/><br/> </p>
+      
+   <br/><br/> </p>
      </div>
 
 <h3>Debouncing</h3>
