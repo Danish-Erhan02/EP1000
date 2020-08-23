@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        .sidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+
+            .sidebar a {
+                padding: 12px 8px 10px 16px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    color: #f1f1f1;
+                }
+
+        .main {
+            margin-left: 140px; /* Same as the width of the sidenav */
+            padding: 0px 20px;
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Arial;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+                .sidebar a {
+                    font-size: 18px;
+                }
+        }
+
+
+        body {
+            background-color: #ffffff;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #2980B9;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+
+        img {
+            display: block;
+            width: 80%;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+    <div class="sidebar">
+
+        <a href="index.html"> Home </a>
+        <a href="aboutme.html"> About me</a>
+        <a href="week1.html"> FabLab Safety</a>
+        <a href="week2.html"> Web Development</a>
+        <a href="week3.html"> Website Hosting</a>
+        <a href="versionctrl.html"> Version Control</a>
+        <a href="week4.html"> CAD & Photoshop</a>
+        <a href="3D.html"> 3D Printing</a>
+        <a href="#Week6"> Week 6</a>
+        <a href="#Week7"> Week 7</a>
+    </div>
+
+
+    <div class="main">
+        <div style="background-color:black;padding:20px;color:white;font-size:20px;"><center><h1>Slotbox</h1></center></div>
+        <p><br/><br/></p>
+        <center>
+            <iframe src="https://ichat816.autodesk360.com/shares/public/SH56a43QTfd62c1cd968dbacda4e61e7ce3d?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+        </center>
+        <center><p><b>Slotbox</b><br /><br/></center>
+        <br />
+        <h3>Tutorials on Slotbox</h3>
+        <center><iframe width="1148" height="480" src="https://www.youtube.com/embed/sHCU5l3nqhc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+        <br />
+        <center><iframe width="1148" height="480" src="https://www.youtube.com/embed/vT_FH3lL-3A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+        <p><br /><br /><br /></p>
+        <footer style=" background-color: #73DAC6;color: black;font-size:13px;height:85px;padding-top:65px;padding-bottom:10px;">
+            <center><p>Copyright &#169 me. All rights reserved.</p></center>
+        </footer>
+    </div>
+
+
+
+
+    <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+    </script>
+
+</body>
+</html>
